@@ -23,10 +23,11 @@ let under18 = 20 / 100;
 //sconto anziani
 let over65 = 40 / 100;
 
+// prezzo finale per giovani
 let priceunder18;
 
+// prezzo finale per anziani
 let priceover65;
-
 
 
 
