@@ -20,15 +20,18 @@ let under18 = 20 / 100;
 let over65 = 40 / 100;
 
 
-
-if (age < 18) {
-   price = price - (price * under18);
-   document.getElementById('display').innerHTML = `Il prezzo è: ${price}`
-   console.log(price);
-} else if (age >= 65) { 
-   price = price - (price * over65);
-   console.log(price);
-   document.getElementById('display').innerHTML = `il prezzo è : ${price}`
+if (isNaN(age) || isNaN(meters)) {
+   document.getElementById('display').innerHTML = 'Inserisci dei numeri'
 } else {
-   document.getElementById('display').innerHTML = `il prezzo è : ${price}`
+   if (age < 18) {
+      price = price - (price * under18);
+      document.getElementById('display').innerHTML = `Il prezzo è: ${price}`
+      console.log(price);
+   } else if (age >= 65) { 
+      price = price - (price * over65);
+      console.log(price);
+      document.getElementById('display').innerHTML = `il prezzo è : ${price}`
+   } else {
+      document.getElementById('display').innerHTML = `il prezzo è : ${price}`
+   }
 }
