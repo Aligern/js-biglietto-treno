@@ -19,11 +19,8 @@ let under18 = 20 / 100;
 //sconto anziani
 let over65 = 40 / 100;
 
-let message = `Il prezzo è: ${price}`
-
-
 if (isNaN(age) || isNaN(meters)) {
-   document.getElementById('display').innerHTML = 'Inserisci dei numeri'
+   document.getElementById('display').innerHTML = 'Inserisci dei numeri';
 } else {
    if (age < 18) {
       price = price - (price * under18);
@@ -31,7 +28,6 @@ if (isNaN(age) || isNaN(meters)) {
    } else if (age >= 65) { 
       price = price - (price * over65);
       console.log(price);
-   } else {
-   }
-   document.getElementById('display').innerHTML = message;
+   } 
+   document.getElementById('display').innerHTML =` il prezzo è: ${price} `;
 }
