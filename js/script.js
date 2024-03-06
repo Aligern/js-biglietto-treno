@@ -9,34 +9,26 @@ L'output del prezzo finale va messo fuori in forma umana (con massimo due decima
 // chiediamo quanti Km vuole percorrere l'utente
 let meters = (prompt ('Inserisci Kilometraggio'));
 console.log(meters);
-
 // chiediamo l'eta all'utente
 let age = (prompt ('Inserisci età'));
 console.log(age);
-
 //prezzo del biglietto per km
 let price = 0.21 * meters;
-
 //sconto minorenni
 let under18 = 20 / 100;
-
 //sconto anziani
 let over65 = 40 / 100;
-
-// prezzo finale per giovani
-let priceunder18;
-
-// prezzo finale per anziani
-let priceover65;
 
 
 
 if (age < 18) {
-   priceunder18 = price * under18;
-   console.log(price - priceunder18);
-   document.getElementById('display').innerHTML=" Il prezzo è: "
+   price = price - (price * under18);
+   document.getElementById('display').innerHTML = `Il prezzo è: ${price}`
+   console.log(price);
 } else if (age >= 65) { 
-   priceover65 = price * over65;
-   document.getElementById('display').innerHTML=" Il prezzo è: "
-   console.log(price - priceover65);
-} 
+   price = price - (price * over65);
+   console.log(price);
+   document.getElementById('display').innerHTML = `il prezzo è : ${price}`
+} else {
+   document.getElementById('display').innerHTML = `il prezzo è : ${price}`
+}
